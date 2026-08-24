@@ -8,7 +8,7 @@ export default function CardLivro({titulo, isbn, autor, ano, categoria,}) {
                     <h4 className='font-bold'>{titulo}</h4>
                 </div>
                 <div className="sub-header ps-15 pt-2">
-                    <p className="font-thin font-5 text-xs">ISBN - {isbn}</p>
+                    <p className="font-thin font-5 text-s">ISBN - {isbn}</p>
                 </div>
                 <div className="description ps-7 pt-2">
                     <p className='font-bold text-s'>Autores:</p>

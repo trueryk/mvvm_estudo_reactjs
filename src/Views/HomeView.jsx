@@ -1,9 +1,5 @@
-import { useEffect } from "react"
 import CardLivro from "../Components/CardLivro"
 export default function HomeView({ livros }) {
-
-
-
     return (
         <>
             <div className="">

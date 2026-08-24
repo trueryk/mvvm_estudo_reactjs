@@ -7,6 +7,24 @@ export default function formLivroViewModel() {
     const [categorias, setCategorias] = useState([])
     const [ano, setAno] = useState('')
 
+    async function post(){
+        const dadosLivro = {
+            titulo: nomeLivro,
+            isbn: isbn,
+            autor: autores,
+            ano_publicacao: ano,
+            categoria: categorias
+        }
+
+        const respondeEnd = await fetch('http://localhost:8080/livro',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dadosLivro)
+        })
+    }
+
     return {
         nomeLivro,
         isbn,
@@ -17,6 +35,7 @@ export default function formLivroViewModel() {
         setIsbn,
         setAutores,
         setCategorias,
-        setAno
+        setAno,
+        post
     }
 }
