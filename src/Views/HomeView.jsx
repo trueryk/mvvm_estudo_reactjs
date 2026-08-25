@@ -13,7 +13,8 @@ export default function HomeView({ livros }) {
                                     isbn={livro.isbn}
                                     autor={livro.autor}
                                     ano={livro.ano_publicacao}
-                                    categoria={livro.categoria} />
+                                    categoria={livro.categoria}
+                                    id={livro.id} />
                             )}
                         </div> : <div className="text-center mt-5">Não há livros cadastrados!</div>
                     }

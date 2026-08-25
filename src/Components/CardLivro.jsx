@@ -1,5 +1,5 @@
 import Book from '../Assets/book.svg'
-export default function CardLivro({titulo, isbn, autor, ano, categoria,}) {
+export default function CardLivro({ titulo, isbn, autor, ano, categoria, id }) {
     return (
         <>
             <div className="h-[18rem] w-[15.5rem] bg-indigo-900 shadow-xl/20 rounded-xl text-mist-50 ">
@@ -20,9 +20,11 @@ export default function CardLivro({titulo, isbn, autor, ano, categoria,}) {
                         <p>{categoria}</p>
                     </div>
                 </div>
-                <button className='ms-5 mt-4 bg-mist-50 hover:bg-indigo-900 text-taupe-950 hover:text-mist-50 hover:ring px-2 py-1 rounded duration-150'>
-                    Ver exemplares
-                </button>
+                <a href={`/formulario_exemplar/${id}`}>
+                    <button className='ms-5 mt-4 bg-mist-50 hover:bg-indigo-900 text-taupe-950 hover:text-mist-50 hover:ring px-2 py-1 rounded duration-150'>
+                        Ver exemplares
+                    </button>
+                </a>
             </div>
         </>
     )

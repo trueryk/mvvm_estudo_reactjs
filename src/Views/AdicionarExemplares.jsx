@@ -3,7 +3,7 @@ import Exemplar from "../Components/Exemplar"
 export default function AdicionarExemplares({ livros }) {
     return (
         <>  {livros.length != 0 ?
-            < div className="grid grid-cols-2">
+            < div className="grid grid-cols-2 gap-4">
                 {livros.map((livro, index) =>
                     <Exemplar
                         key={index}
